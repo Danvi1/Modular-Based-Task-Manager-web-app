@@ -15,4 +15,8 @@ export class App {
   protected readonly title = signal('task-manager-app');
 
   users = signal(DUMMY_USERS);
+
+  onSelectUser(id: string){
+    console.log("Selected user with id: ", id)
+  }
 }
