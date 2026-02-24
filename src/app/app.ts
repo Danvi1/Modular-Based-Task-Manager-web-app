@@ -5,7 +5,6 @@ import { UserComponent } from './user/user.component';
 import { TasksComponent } from './tasks/tasks.component';
 
 import { DUMMY_USERS } from './dummy-users';
-
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, HeaderComponent, UserComponent, TasksComponent],
@@ -17,6 +16,7 @@ export class App {
 
   users = DUMMY_USERS;
   selectedUserId?: string;
+  addTaskEnabled: boolean = false;
 
   get selectedUser(){
     return this.users.find((user) => user.id === this.selectedUserId);
@@ -25,6 +25,10 @@ export class App {
   onSelectUser(id: string){
     console.log("Selected user with id: ", id);
     this.selectedUserId = id;
+  }
+
+  newTask(){
+    this.addTaskEnabled = true;
   }
 
 }
