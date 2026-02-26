@@ -1,4 +1,4 @@
-# 📝 Simple Todo Application (Angular)
+# 📝 Simple Todo Application - Module based (Angula2+ till Angular15)
 
 A clean and minimal Todo application built using Angular.  
 This application allows users to create, update, delete, and manage daily tasks efficiently.
